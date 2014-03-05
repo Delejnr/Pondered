@@ -1,4 +1,7 @@
 Pondered::Application.routes.draw do
+  root :to => 'pages#home'
+  get "about" => "pages#about" #creates an about_path
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
