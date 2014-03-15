@@ -1,6 +1,10 @@
 Pondered::Application.routes.draw do
+  devise_for :users
   root :to => 'pages#home'
   get "about" => "pages#about" #creates an about_path
+  get "sign up" =>"pages#new_user_registration_path"
+  
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
