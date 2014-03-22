@@ -68,4 +68,6 @@ Pondered::Application.configure do
   # Required for Heroku
   # Noe to set this to your actual host
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+config.eager_load = true
+config.assets.js_compressor = :uglifier
 end

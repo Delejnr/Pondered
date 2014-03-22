@@ -5,7 +5,7 @@ gem 'sqlite3'
 gem 'bootstrap-sass'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
-
+gem "cancan"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
