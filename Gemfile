@@ -1,15 +1,16 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+gem 'rails', '4.0.0'
 gem 'sqlite3'
 gem 'bootstrap-sass'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem "cancan"
-
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'protected_attributes'
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails',   '~> 4.0.0'
+  gem 'coffee-rails', '~> 4.0.0'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
