@@ -1,6 +1,8 @@
 Pondered::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   devise_for :users
   root :to => 'pages#home'
