@@ -3,6 +3,7 @@ class CreateComments < ActiveRecord::Migration
     create_table :comments do |t|
       t.string :commenter
       t.text :body
+       # this line adds an integer column called `post_id`.
       t.references :post, index: true
 
       t.timestamps
