@@ -1,5 +1,7 @@
 Pondered::Application.routes.draw do
 
+  resources :articles
+
  resources :authentications
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :posts do
