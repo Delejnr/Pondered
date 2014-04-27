@@ -1,5 +1,6 @@
 Pondered::Application.routes.draw do
 
+  get "profiles/show"
   resources :articles
 
  resources :authentications
