@@ -1,17 +1,17 @@
 Pondered::Application.routes.draw do
 
   
-  resources :articles
+  resources :categories
+
+  resources :posts
 
  resources :authentications
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resources :posts do
-    resources :comments
-  end
+ 
 get '/auth/:provider/callback' => 'authentications#create'
   devise_for :users
   get 'users/:id' => 'users#show'
-  get '/:id' , to: 'profiles/show'
+  
   root :to => 'pages#home'
   get "about" => 'pages#about' #creates an about_path
   get "sign up" =>"pages#new_user_registration_path"

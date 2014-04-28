@@ -4,6 +4,7 @@
   <div class="panel-heading">
     <h2>Sign in</h2>
   </div>
+  <div class="col1">            
     <div class="panel-body">
      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   
@@ -27,3 +28,13 @@
 <% end %><br>
 <div class="panel-footer">
 <%= render "devise/shared/links" %>
+</div>
+<div class="row3">
+ <div class="col-md-8">             
+ <h4>Use other accounts</h4>
+ <p>
+  You can also sign in using your Facebook Account or Google Account
+</p>
+<a href="" class="btn btn-large btn-block btn-fb">Login with Facebook</a>
+<a href="" class="btn btn-large btn-block btn-google">Login with Google</a>
+</div>

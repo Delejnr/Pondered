@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  rolify
 	has_many :authentications
 
   # Include default devise modules. Others available are:
@@ -10,7 +11,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me,
                   :first_name, :last_name, :profile_name
   # attr_accessible :title, :body
-
+    validates_presence_of :profile_name
+    has_many :posts
   
 
 end

@@ -2,12 +2,6 @@
 
 one:
   name: MyString
-  content: MyText
-  published_on: 2014-04-25
-  tags: MyString
 
 two:
   name: MyString
-  content: MyText
-  published_on: 2014-04-25
-  tags: MyString
