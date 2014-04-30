@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
     validates_presence_of :profile_name
     has_many :posts
   
-
+    rails_admin do
+    configure :users do
 end
-
+end
+end

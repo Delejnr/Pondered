@@ -1,10 +1,11 @@
 Pondered::Application.routes.draw do
+     resources :categories
+     
+     resources :posts
 
+
+     devise_for :admins
   
-  resources :categories
-
-  resources :posts
-
  resources :authentications
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
  

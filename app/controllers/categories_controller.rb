@@ -1,9 +1,12 @@
 class CategoriesController < ApplicationController
-  before_action :set_category, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
+  def index
+    @categories = Category.all
+  end
 
   # GET /categories
   def index
-    @categories = Category.all
+    
   end
 
   # GET /categories/1
@@ -12,7 +15,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/new
   def new
-    @category = Category.new
+    
   end
 
   # GET /categories/1/edit
@@ -21,7 +24,7 @@ class CategoriesController < ApplicationController
 
   # POST /categories
   def create
-    @category = Category.new(category_params)
+    
 
     if @category.save
       redirect_to @category, notice: 'Category was successfully created.'
@@ -41,7 +44,7 @@ class CategoriesController < ApplicationController
 
   # DELETE /categories/1
   def destroy
-    @category.destroy
+    
     redirect_to categories_url, notice: 'Category was successfully destroyed.'
   end
 
