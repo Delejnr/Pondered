@@ -1,4 +1,6 @@
 Pondered::Application.routes.draw do
+     get "profiles/show"
+
      resources :categories
      
      resources :posts
@@ -11,7 +13,8 @@ Pondered::Application.routes.draw do
  
 get '/auth/:provider/callback' => 'authentications#create'
   devise_for :users
-  get 'users/:id' => 'users#show'
+  
+  get '/:id', to: 'profiles#show'
   
   root :to => 'pages#home'
   get "about" => 'pages#about' #creates an about_path
