@@ -1,5 +1,6 @@
 <%= simple_form_for @post, :html => { :class => 'form-horizontal' } do |f| %>
   <%= f.input :title %>
+  <br>
   <%= f.input :body %>
   <%= f.input :publish_date %>
   <%= f.association :categories, :as => :check_boxes %>

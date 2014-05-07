@@ -6,6 +6,6 @@ class PagesController < ApplicationController
   end
 
   def explore
-  	@posts = post.all
+  	@categories = Category.all
   end
 end

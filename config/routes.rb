@@ -12,16 +12,20 @@ Pondered::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
  
 get '/auth/:provider/callback' => 'authentications#create'
-  devise_for :users
+  devise_for :users 
   
+  authenticated :user do
   get '/:id', to: 'profiles#show'
+end
+  
+  
   
   root :to => 'pages#home'
   get "about" => 'pages#about' #creates an about_path
   get "sign up" =>"pages#new_user_registration_path"
   get "contact" =>'pages#contact us'
   get "explore" =>'pages#explore'
-  get "profile" =>'pages#profile'
+  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

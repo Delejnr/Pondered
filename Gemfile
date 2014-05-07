@@ -4,7 +4,6 @@ gem 'rails', '4.0.0'
 gem 'sqlite3'
 gem 'bootstrap-sass'
 gem 'devise'
-gem "cancan"
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'protected_attributes'
 gem 'omniauth'
