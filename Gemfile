@@ -13,6 +13,8 @@ gem 'nifty-generators'
 gem 'will_paginate-bootstrap'
 gem "rolify"
 gem 'simple_form'
+gem 'ckeditor_rails'
+gem "paperclip", "~> 4.1"
  
 group :assets do
   gem 'sass-rails',   '~> 4.0.0'
