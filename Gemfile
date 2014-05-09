@@ -15,6 +15,8 @@ gem "rolify"
 gem 'simple_form'
 gem 'ckeditor_rails'
 gem "paperclip", "~> 4.1"
+gem 'sunspot_rails'
+
  
 group :assets do
   gem 'sass-rails',   '~> 4.0.0'
@@ -35,4 +37,5 @@ gem "mocha", group: :test
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
+  gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
 end

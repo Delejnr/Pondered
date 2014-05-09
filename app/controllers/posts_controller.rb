@@ -4,6 +4,11 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    @search = Post.search do
+    fulltext params[:search]
+    with(:published_at).less_than(Time.zone.now)
+    facet(:publish_month)
+    with(:publish_month, params[:month]) if params[:month].present?
     @posts = Post.order('publish_date DESC')
     @posts = @posts.published if current_user.blank?
     @posts = @posts.by_user_id(params[:user]) if params[:user].present?
@@ -13,6 +18,7 @@ class PostsController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @posts }
     end
+    @posts = @search.results
   end
 
   # GET /posts/1

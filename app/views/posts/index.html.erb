@@ -1,7 +1,7 @@
 <% @posts.each do |post| %>
   <div class="row">
-    <div class="span8"><h1><%= post.title %></h1></div>
-    <div class="span4"><medim><%= l post.publish_date, :format => :long %></medium></div>
+    <div class="span8"><h2><%= post.title %></h2></div>
+    <div class="span4"><h3><%= l post.publish_date, :format => :long %></h3></div>
   </div>
   <div class="row">
     <div class="span8">Author: <%= link_to post.user.name, root_path(:user => post.user.id) %></div>

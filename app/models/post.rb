@@ -7,8 +7,18 @@ class Post < ActiveRecord::Base
     scope :by_user_id, lambda {|uid| where(:user_id => uid)}
     scope :by_category_id, lambda {|cid| joins(:categories).where(['categories.id =?',cid])} 
 
-	rails_admin do
-	  configure :post do
+	searchable do
+  text :name, :boost => 5
+  text :content, :publish_month
+  text :comments do
+    comments.map(&:content)
+  end
+  time :published_at
+  string :publish_month
+end
+
+def publish_month
+  published_at.strftime("%B %Y")
 end
 end
 end

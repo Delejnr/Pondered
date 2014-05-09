@@ -65,26 +65,44 @@ $brand-primary: black;
 }
 
 
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
 
-/* Carousel base class */
-.carousel {
-  margin-bottom: 60px;
+.search {
+  position: relative;
+  padding-top: 41px;
+  margin-bottom: 0;
 }
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
+.search input {
+  padding-left: 240px;
 }
-
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 400px;
-  background-color:#555;
-}
-.carousel img {
+.search .keyword {
   position: absolute;
-  top: 0;
-  left: 0;
-  min-height: 400px;
+  width: 100px;
+  margin-left: 10px;
+  margin-top: 17px;
+}
+.search i {
+  position: absolute;
+  margin-left: 207px;
+  font-size: 30px;
+  line-height: 50px;
+  color: #ccc;
+}
+.search .search-field {
+  height: 50px;
+}
+.search .arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #2ba6cb;
+  margin-left: 71px;
+  margin-top: -10px;
+}
+
+#drop3.content.open {
+  position: absolute !important;
+  top: 30px !important;
+  left: -10px !important;
+  width: 120% !important;
 }
