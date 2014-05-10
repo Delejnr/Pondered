@@ -5,3 +5,9 @@ class UserTest < ActiveSupport::TestCase
   #   assert true
   # end
 end
+
+test "a user should enter a profile name" do
+    user = User.new
+    assert !user.save
+    assert !user.errors[:profile_name].empty?
+  end

@@ -9,11 +9,12 @@ Pondered::Application.routes.draw do
      devise_for :admins
   
  resources :authentications
+ 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
  
 get '/auth/:provider/callback' => 'authentications#create'
   devise_for :users 
-  
+
   authenticated :user do
   get '/:id', to: 'profiles#show'
 end
