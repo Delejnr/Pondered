@@ -1,5 +1,7 @@
 <%= simple_form_for @post, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :title %>
+  <div class="form-group">
+    <%= f.input :title %>
+  </div>
   <%= f.text_area :body, :class => 'ckeditor' %>
   <%= f.input :publish_date %>
   <%= f.association :categories, :as => :check_boxes %>

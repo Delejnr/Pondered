@@ -107,15 +107,50 @@ $brand-primary: black;
   width: 120% !important;
 }
 
-#footer
-.container {
-padding-right: 15px;
-padding-left: 15px;
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html, body, .container, .content {
+    height: 100%;
 }
-.container {
-width: 970px;
+ 
+.container, .content {
+    position: relative;
 }
-.container {
-margin-right: auto;
-margin-left: auto;
+ 
+.proper-content {
+    padding-top: 40px; /* >= navbar height */
+}
+ 
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -50px; /* same as the footer */
+}
+ 
+.push {
+    height: 50px; /* same as the footer */
+}
+.footer-wrapper {
+    position: relative;
+    height: 50px;
+}
+
+.span4 {
+width: 300px;
+}
+
+well {
+border: none;
+-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.2),-1px -1px 0 rgba(0,0,0,0.1);
+-moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.2),-1px -1px 0 rgba(0,0,0,0.1);
+box-shadow: 1px 1px 1px rgba(0,0,0,0.2),-1px -1px 0 rgba(0,0,0,0.1);
+}
+
+.well {
+min-height: 20px;
+padding: 19px;
+margin-bottom: 20px;
+background-color: #ffffff;
 }

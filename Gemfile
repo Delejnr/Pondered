@@ -17,6 +17,7 @@ gem 'ckeditor_rails'
 gem "paperclip", "~> 4.1"
 gem 'sunspot_rails'
 
+
  
 group :assets do
   gem 'sass-rails',   '~> 4.0.0'
@@ -38,4 +39,5 @@ group :development do
   gem "better_errors"
   gem "binding_of_caller"
   gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
+  gem 'meta_request'
 end

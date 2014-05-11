@@ -30,6 +30,7 @@
             </li>
             <% end %>
             <% if user_signed_in? %><li>
+            <li><%= link_to "Account" , profiles_show_path %></li>
             <li><%= link_to "Profile" , profiles_show_path%></li>
             <li><%= link_to "Account Settings", edit_user_registration_path %></li>
             <li><%= link_to "Manage Posts", "/posts" %></li>
@@ -37,7 +38,7 @@
         <% else %>
         <% end %>
     </ul>
-        <li><%= link_to "Account" , profiles_show_path %></li>
+        
         <li><%= link_to "Features" , about_path %></li>
         
         </li>
