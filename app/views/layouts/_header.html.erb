@@ -24,11 +24,13 @@
             <ul class="dropdown-menu">
             <% if user_signed_in? %>
             <% else %>
-            <li><%= link_to "Sign in" , new_user_session_path%></li>
-            <li><%= link_to "sign up" , new_user_registration_path%></li>
+            
+            <li><span class="glyphicon glyphicon-log-in"><%= link_to "Sign in" , new_user_session_path %></li></span>
+            <li><span class="glyphicon glyphicon-log-in"><%= link_to "sign up" , new_user_registration_path%></li>
             <li class="divider">
             </li>
-             <li><%= link_to "sign in with Facebook" ,"/auth/facebook"%></li>
+            <a href="/auth/facebook" class="auth_provider">
+            <%= image_tag "facebook_64.png", :size => "64x64", :alt => "Facebook" %>
             <a href="/auth/twitter" class="auth_provider">
             <%= image_tag "twitter_64.png", :size => "64x64", :alt => "Twitter" %>
             
