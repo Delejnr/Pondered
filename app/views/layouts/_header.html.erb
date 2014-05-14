@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-transparent" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -24,9 +25,13 @@
             <% if user_signed_in? %>
             <% else %>
             <li><%= link_to "Sign in" , new_user_session_path%></li>
-            <li class="divider"></li>
-
             <li><%= link_to "sign up" , new_user_registration_path%></li>
+            <li class="divider">
+            </li>
+             <li><%= link_to "sign in with Facebook" ,"/auth/facebook"%></li>
+            <a href="/auth/twitter" class="auth_provider">
+            <%= image_tag "twitter_64.png", :size => "64x64", :alt => "Twitter" %>
+            
             </li>
             <% end %>
             <% if user_signed_in? %><li>

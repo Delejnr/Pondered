@@ -1,11 +1,14 @@
 Pondered::Application.routes.draw do
+  
+
      get "profiles/show"
 
      resources :categories
      
-     resources :posts
-
-
+     resources :posts do
+      resources :comments
+     end
+     
      devise_for :admins
   
  resources :authentications
@@ -13,6 +16,7 @@ Pondered::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
  
 get '/auth/:provider/callback' => 'authentications#create'
+get 'auth/failure', to: redirect('/')
   devise_for :users 
 
   authenticated :user do

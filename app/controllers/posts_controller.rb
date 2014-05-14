@@ -85,5 +85,9 @@ class PostsController < ApplicationController
       format.html { redirect_to posts_url }
       format.json { head :no_content }
     end
+    private
+     def post_params
+      params.require(:post).permit(:body, :image)
+    end
   end
 end

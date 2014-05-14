@@ -18,6 +18,7 @@ gem "paperclip", "~> 4.1"
 gem 'sunspot_rails'
 
 
+
  
 group :assets do
   gem 'sass-rails',   '~> 4.0.0'

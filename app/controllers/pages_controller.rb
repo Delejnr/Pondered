@@ -6,6 +6,6 @@ class PagesController < ApplicationController
   end
 
   def explore
-  	
+ 
   end
 end

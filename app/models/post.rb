@@ -2,6 +2,7 @@ class Post < ActiveRecord::Base
 	attr_accessible :body, :publish_date, :title, :category_ids
 	validates_presence_of :title, :body, :publish_date, :user_id
 	belongs_to :user
+	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 	has_and_belongs_to_many :categories
     scope :published, lambda { where(['publish_date <= ?', Date.today]) }
     scope :by_user_id, lambda {|uid| where(:user_id => uid)}
