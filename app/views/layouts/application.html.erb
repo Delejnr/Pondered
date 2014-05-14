@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <title>Pondered</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag 'ckeditor/ckeditor.js' %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -15,8 +17,16 @@
 
 
 </div>
+<script type="text/javascript">$(document).ready(function() {
+    if ($('textarea').length > 0) {
+        var data = $('textarea');
+        $.each(data, function(i) {
+            CKEDITOR.replace(data[i].id);
+        });
+    }
+});</script>
 </body>
 </html>
 
-		<%= render 'layouts/footer' %>
+		
 	

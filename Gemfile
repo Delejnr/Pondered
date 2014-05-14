@@ -13,7 +13,7 @@ gem 'nifty-generators'
 gem 'will_paginate-bootstrap'
 gem "rolify"
 gem 'simple_form'
-gem 'ckeditor_rails'
+gem "ckeditor"
 gem "paperclip", "~> 4.1"
 gem 'sunspot_rails'
 

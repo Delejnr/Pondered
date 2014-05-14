@@ -2,7 +2,7 @@
   <div class="form-group">
     <%= f.input :title %>
   </div>
-  <%= f.text_area :body, :class => 'ckeditor' %>
+  <%= f.text_area :body, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
   <%= f.input :publish_date %>
   <%= f.association :categories, :as => :check_boxes %>
   <br>

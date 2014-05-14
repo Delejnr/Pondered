@@ -56,5 +56,7 @@ module Pondered
     
     # Required for Heroku
     config.assets.initialize_on_precompile = false
+    #for ckeditor
+    config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
   end
 end

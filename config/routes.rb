@@ -1,6 +1,7 @@
 Pondered::Application.routes.draw do
   
 
+  mount Ckeditor::Engine => '/ckeditor'
      get "profiles/show"
 
      resources :categories
